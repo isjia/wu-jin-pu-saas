@@ -2,7 +2,7 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-const greeting = 'Hello Wrold'
+const greeting = 'Hello Wrold';
 
 function App() {
   return (
