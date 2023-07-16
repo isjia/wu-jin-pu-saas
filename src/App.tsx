@@ -1,5 +1,5 @@
 import React from 'react'
-import QuestionList from './QuestionList'
+import QuestionList from './pages/QuestionList'
 
 function App() {
   return <QuestionList />

@@ -1,0 +1,29 @@
+.page-wrap {
+  width: 90%;
+  margin: 0 auto;
+  background: rgb(237,237,237);
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .title-wrap {
+    display: flex;
+    align-items: center;
+    .title {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+  }
+}
+
+.main-content {
+  margin: 20px 0;
+}
+
+.footer {
+  text-align: center;
+}
