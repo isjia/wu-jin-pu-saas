@@ -6,10 +6,12 @@ type PropsType = {
   qid: number
   title: string
   isPublished: boolean
+  del?: (qid: number) => void
+  pub?: (qid: number) => void
 }
 
 const QuestionCard: FC<PropsType> = (props) => {
-  const { qid, title, isPublished } = props
+  const { qid, title, isPublished, del, pub } = props
 
   const edit = (qid: number) => {
     console.log('edit ', qid)
@@ -28,6 +30,30 @@ const QuestionCard: FC<PropsType> = (props) => {
         >
           编辑问卷
         </button>
+        &nbsp;
+        {pub ? (
+          <button
+            onClick={() => {
+              pub(qid)
+            }}
+          >
+            发布问卷
+          </button>
+        ) : (
+          ''
+        )}
+        &nbsp;
+        {del ? (
+          <button
+            onClick={() => {
+              del(qid)
+            }}
+          >
+            删除问卷
+          </button>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   )
