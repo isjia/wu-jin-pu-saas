@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 import { produce } from 'immer'
+import { useTitle } from 'ahooks'
 
 import QuestionCard from '../components/QuestionCard'
 
@@ -51,6 +52,8 @@ function randomXToY(minVal: number, maxVal: number) {
 }
 
 const QuestionList: FC = () => {
+  useTitle('金普调研 - 问卷列表')
+
   const [questionList, setQuestionList] = useState(rawQuestionList)
 
   // 新增问卷

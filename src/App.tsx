@@ -1,8 +1,9 @@
 import React from 'react'
-import QuestionList from './pages/QuestionList'
+import { RouterProvider } from 'react-router-dom'
+import router from './router/index'
 
 function App() {
-  return <QuestionList />
+  return <RouterProvider router={router}></RouterProvider>
 }
 
 export default App

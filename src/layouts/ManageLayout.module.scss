@@ -1,0 +1,17 @@
+.content-wrap {
+  display: flex;
+  min-height: 180px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content {
+  flex: 1;
+  justify-content: center;
+}
