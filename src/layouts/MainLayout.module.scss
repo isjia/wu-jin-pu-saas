@@ -1,0 +1,31 @@
+.header-section {
+  text-align: center;
+  color: #fff;
+  height: 64px;
+  padding-inline: 50;
+  line-height: 64px;
+  background-color: #7dbcea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+};
+
+.content-section {
+  text-align: center;
+  min-height: calc(100vh - 64px - 65.09px);
+  color: #333;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  text-align: center;
+  color: #333;
+  // background-color: #7dbcea;
+  border-top: 1px solid #ccc;
+}

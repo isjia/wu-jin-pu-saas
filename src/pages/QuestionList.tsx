@@ -52,7 +52,7 @@ function randomXToY(minVal: number, maxVal: number) {
 }
 
 const QuestionList: FC = () => {
-  useTitle('金普调研 - 问卷列表')
+  useTitle('金普问卷 - 问卷列表')
 
   const [questionList, setQuestionList] = useState(rawQuestionList)
 

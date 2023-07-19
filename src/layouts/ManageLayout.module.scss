@@ -1,17 +1,20 @@
 .content-wrap {
   display: flex;
   min-height: 180px;
+  flex-grow: 1;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 120px;
+  width: 200px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  min-height: 400px;
+  margin-top: 95px;
 }
 
 .main-content {
-  flex: 1;
+  flex-grow: 1;
   justify-content: center;
 }
