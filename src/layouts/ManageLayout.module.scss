@@ -2,6 +2,8 @@
   display: flex;
   min-height: 180px;
   flex-grow: 1;
+  max-width: 1200px;
+  min-width: 1200px;
 }
 
 .sidebar {
@@ -17,4 +19,6 @@
 .main-content {
   flex-grow: 1;
   justify-content: center;
+  min-height: calc(100vh - 64px - 65.09px);
+  background-color: rgb(237,237,237);
 }

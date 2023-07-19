@@ -18,7 +18,7 @@ const MainLayout: FC = () => {
       <Content className={styles['content-section']}>
         <Outlet />
       </Content>
-      <Footer className={styles['footer-section']}>金普问卷 &copy; 2023 by wiz</Footer>
+      <Footer className={styles['footer-section']}>金普问卷 &copy; 2023 Powered by wiz</Footer>
     </Layout>
   )
 }

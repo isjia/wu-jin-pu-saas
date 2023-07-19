@@ -4,7 +4,8 @@
   height: 64px;
   padding-inline: 50;
   line-height: 64px;
-  background-color: #7dbcea;
+  // background-color: #1677ff;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,10 +18,11 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  width: 1200px;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 100%;
+  // margin: 0 auto;
 }
 
 .footer-section {
