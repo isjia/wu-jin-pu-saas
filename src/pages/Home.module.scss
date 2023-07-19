@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 100%;
+  min-height: calc(100vh - 64px - 65.09px);
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  .info {
+    color: white;
+  }
+  Button {
+    height: 60px;
+  }
+}
