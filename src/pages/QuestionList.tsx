@@ -1,29 +1,21 @@
 import { FC, useState } from 'react'
 import { produce } from 'immer'
 import { useTitle } from 'ahooks'
+import { Typography, Button } from 'antd'
 
+import { Question } from '../types'
 import QuestionCard from '../components/QuestionCard'
 
 import styles from './QuestionList.module.scss'
 
-// 定义问卷类型
-type Question = {
-  _id: string
-  title: string
-  isPublished: boolean
-  isStar: boolean
-  answerCount: number
-  createdAt: string
-  del?: (qid: number) => void
-  pub?: (qid: number) => void
-}
+const { Title } = Typography
 
 const rawQuestionList: Question[] = [
   {
     _id: '123',
     title: '问卷123',
     isPublished: true,
-    isStar: false,
+    isStar: true,
     answerCount: 5,
     createdAt: '7月1日 12:12',
   },
@@ -120,27 +112,31 @@ const QuestionList: FC = () => {
     <div className={styles['page-wrap']}>
       <div className={styles.header}>
         <div className={styles['title-wrap']}>
-          <h1 className={styles.title}>我的问卷</h1>
+          {/* <h1 className={styles.title}>我的问卷</h1> */}
+          <Title level={3} style={{ marginBottom: 0, marginRight: '8px' }}>
+            我的问卷
+          </Title>
           {/* 新增问卷按钮 */}
-          <button onClick={create} className='btn-create'>
-            新增问卷
-          </button>
+          <Button onClick={create} type='primary' size='small'>
+            新增
+          </Button>
         </div>
         <div>search</div>
       </div>
       {/* 问卷列表 */}
       <div className={styles['main-content']}>
         {questionList.map((question) => {
-          const { _id, title, isPublished, answerCount, createdAt } = question
+          const { _id, title, isStar, isPublished, answerCount, createdAt } = question
           return (
             <QuestionCard
               key={_id}
               qid={_id}
               title={title}
+              isStar={isStar}
               isPublished={isPublished}
               answerCount={answerCount}
               createdAt={createdAt}
-              del={isPublished ? undefined : delQuestion}
+              del={delQuestion}
               pub={isPublished ? undefined : pubQuestion}
             />
           )
@@ -148,7 +144,7 @@ const QuestionList: FC = () => {
       </div>
 
       {/* footer */}
-      <div className={styles.footer}>分页</div>
+      <div className={styles.footer}>load more ...</div>
     </div>
   )
 }
